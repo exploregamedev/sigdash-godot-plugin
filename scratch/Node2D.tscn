@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scratch/ColorRect.gd" type="Script" id=1]
+[ext_resource path="res://scratch/Node2D.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TheBox" type="ColorRect" parent="."]
+margin_right = 376.0
+margin_bottom = 266.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button A" type="Button" parent="TheBox"]
+margin_left = 246.0
+margin_top = 183.0
+margin_right = 314.0
+margin_bottom = 203.0
+text = "Button A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="TheBox" to="TheBox" method="_on_ColorRect_mouse_entered"]
